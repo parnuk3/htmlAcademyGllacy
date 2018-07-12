@@ -1,3 +1,88 @@
-body {
-    background-color: #eee;
+/*Подключение шрифтов*/
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("fonts/RobotoRegular/RobotoRegular.eot");
+    src: url("fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+    url("fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
 }
+@font-face {
+    font-family: "RobotoBold";
+    src: url("fonts/RobotoBold/RobotoBold.eot");
+    src: url("fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
+    url("fonts/RobotoBold/RobotoBold.woff") format("woff"),
+    url("fonts/RobotoBold/RobotoBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    
+    padding: 0;
+    margin: 0;
+    /*text style*/
+    
+    font-size: 16px;
+    color: #323232;
+}
+.container {
+    margin: 0 auto;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    width: 1200px;
+    background-color: #849d8f;
+}
+
+
+.header-logo {
+    width: 154px;
+    height: 64px;
+    float: left;
+    margin-right: 13px;
+}
+
+.main-nav {
+    list-style: none;
+    float:left;
+    margin: 0;
+    padding: 0;
+    font-family: "RobotoBold", sans-serif;
+    
+}
+.main-nav li {
+    float:left;
+    vertical-align: middle;
+}
+
+.main-nav li a {
+    /*text style*/
+    color:  #ffffff;
+    line-height: 18px;
+    text-align: left;
+    text-decoration: none;
+    padding: 0;
+    border-bottom: 1px solid white;
+    display: inline-block;
+    padding: 9px 13px;
+    border: 1px solid transparent;
+}
+
+.main-nav li a:hover {
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: white;
+    color: #323232;
+}
+
+.main-nav li a:active {
+   color:
+}
+
+.clearfix::after {
+    clear: both;
+}
+
