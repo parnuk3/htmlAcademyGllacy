@@ -37,6 +37,10 @@ body {
     background-color: #849d8f;
 }
 
+.page-header {
+    color: #ffffff;
+    font-family: "RobotoBold", sans-serif;
+}
 
 .header-logo {
     width: 154px;
@@ -51,11 +55,10 @@ body {
     margin: 0;
     padding: 0;
     font-family: "RobotoBold", sans-serif;
-    
+    margin-top: 10px;
 }
 .main-nav li {
     float:left;
-    vertical-align: middle;
 }
 
 .main-nav li a {
@@ -63,12 +66,12 @@ body {
     color:  #ffffff;
     line-height: 18px;
     text-align: left;
+    margin: 9px 13px;
     text-decoration: none;
-    padding: 0;
-    border-bottom: 1px solid white;
-    display: inline-block;
-    padding: 9px 13px;
     border: 1px solid transparent;
+    border-bottom: 1px solid white;
+    display: block;
+   
 }
 
 .main-nav li a:hover {
@@ -76,6 +79,8 @@ body {
     border-radius: 50px;
     background-color: white;
     color: #323232;
+    padding: 9px 13px;
+    margin: 0;
 }
 
 .main-nav li a:active {
@@ -83,6 +88,54 @@ body {
 }
 
 .clearfix::after {
+    content: "";
     clear: both;
 }
 
+/*Кнопки*/
+.btn {
+    border-radius: 50px;
+    background-color: #ed5f3f;
+    display: inline-block;
+    padding: 9px 13px;
+    color:  #ffffff;
+    font-family: "RobotoBold", sans-serif;
+    line-height: 18px;
+    text-align: left;
+    text-decoration: none;  
+}
+
+.header-users-btn {
+    margin-top: 10px;
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0-
+}
+
+.btn-header {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    margin-left: 10px;
+}
+
+.header-contacts {
+    clear: both;
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+
+.header-schedule {
+    font-size: 14px;
+}
+
+.header-phone {
+    font-size: 22px;
+}
+
+.main-search {
+    color: transparent;
+    width: 36px;
+    height: 36px;
+}
