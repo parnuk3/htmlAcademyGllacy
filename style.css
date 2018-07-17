@@ -117,6 +117,7 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
     margin-left: 10px;
+    float: left;
 }
 
 .header-contacts {
@@ -136,6 +137,6 @@ body {
 
 .main-search {
     color: transparent;
-    width: 36px;
-    height: 36px;
+    display: block;
+
 }
