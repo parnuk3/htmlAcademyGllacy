@@ -97,20 +97,21 @@ body {
     border-radius: 50px;
     background-color: #ed5f3f;
     display: inline-block;
-    padding: 9px 13px;
     color:  #ffffff;
     font-family: "RobotoBold", sans-serif;
-    line-height: 18px;
     text-align: left;
-    text-decoration: none;  
+    text-decoration: none;
 }
 
 .header-users-btn {
     margin-top: 10px;
     float: right;
     display: inline-block;
-    vertical-align: middle;
-    font-size: 0-
+}
+
+header-users-btn a {
+    padding: 0;
+    margin: 0;
 }
 
 .btn-header {
@@ -118,8 +119,14 @@ body {
     border: none;
     margin-left: 10px;
     float: left;
+    height: 33px;
+    text-align: left;
+    line-height: 33px;
+    font-size: 14px;
 }
-
+.btn-header:not(.main-search) {
+    padding-left: 44px;
+}
 .header-contacts {
     clear: both;
     display: inline-block;
@@ -134,9 +141,19 @@ body {
 .header-phone {
     font-size: 22px;
 }
+.header-login {
+    width: 62px;
+    background-image: url("img/login.png");
+    background-repeat: no-repeat;
+    background-position: 16px 50%;
+}
+
+.header-cart {
+    width: 86px;
+}
 
 .main-search {
     color: transparent;
     display: block;
-
+    width: 33px;
 }
