@@ -34,6 +34,10 @@ body {
     padding-top: 10px;
     padding-bottom: 25px;
     width: 1200px;
+    background-color: black;
+}
+
+.first-bg {
     background-color: #849d8f;
 }
 
@@ -184,7 +188,28 @@ header-users-btn a {
 }
 
 .slider-btn {
-    
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.slider-btn + label {
+    position: relative;
+    cursor: pointer;
+    margin-right: 29px;;
+}
+
+.slider-btn + label::before {
+    content: '';
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.slider-btn:checked + label:before {
+  background-color: #fff;
 }
 
 .promo-btn {
