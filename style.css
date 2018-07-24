@@ -19,25 +19,21 @@
 }
 
 body {
-    
     padding: 0;
     margin: 0;
-    /*text style*/
     
+    /*text style*/   
     font-size: 16px;
     color: #323232;
 }
 .container {
+    box-sizing: border-box;
     margin: 0 auto;
     padding-left: 27px;
     padding-right: 27px;
     padding-top: 10px;
     padding-bottom: 25px;
     width: 1200px;
-    background-color: black;
-}
-
-.first-bg {
     background-color: #849d8f;
 }
 
@@ -74,8 +70,7 @@ body {
     text-decoration: none;
     border: 1px solid transparent;
     border-bottom: 1px solid white;
-    display: block;
-   
+    display: block;  
 }
 
 .main-nav li a:hover {
@@ -88,7 +83,7 @@ body {
 }
 
 .main-nav li a:active {
-   color:
+   opacity: 0.8;
 }
 
 .clearfix::after {
@@ -138,20 +133,7 @@ header-users-btn a {
 .btn-header:not(.main-search) {
     padding-left: 44px;
 }
-.header-contacts {
-    clear: both;
-    display: inline-block;
-    float: right;
-    text-align: right;
-}
 
-.header-schedule {
-    font-size: 14px;
-}
-
-.header-phone {
-    font-size: 22px;
-}
 .header-login {
     width: 62px;
     background-image: url("img/login.png");
@@ -175,6 +157,23 @@ header-users-btn a {
     background-position: 50%;
 }
 
+/* контакты в шапке */
+.header-contacts {
+    clear: both;
+    display: inline-block;
+    float: right;
+    text-align: right;
+}
+
+.header-schedule {
+    font-size: 14px;
+}
+
+.header-phone {
+    font-size: 22px;
+}
+
+/*Промо блок*/
 .promo {
     height: 600px;
     clear: both;
@@ -217,18 +216,76 @@ header-users-btn a {
     left: 433px;
     bottom: 16px;
     width: 280px;
-    height: 64px;
-    text-align: center;
-    line-height: 64px;
+    height: 64px; 
     padding: 0;
     
     /*стили текста*/
     
     font-family: "RobotoBold", sans-serif;
-    
     color:  #ffffff;
-    font-size: 32px;/* Приближение из-за подстановки шрифтов */
-
+    font-size: 32px;
     text-align: center;
+    line-height: 64px;
     text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 }
+
+/*баннеры*/
+
+.banners {
+    color:  #ffffff;
+    font-family: "RobotoBold", sans-serif;
+    text-align: left;
+}
+
+.post {
+    box-sizing: border-box;
+    width: 560px;
+    height: 229px;
+    border-radius: 15px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.post:first-child {
+    margin-right: 26px;
+}
+
+.banner-item {
+    padding: 23px 21px 23px 20px;
+    position: relative;
+}
+
+.banner-item-title {
+    margin: 0;
+    padding: 0;
+    font-size: 35px;
+}
+
+.banner-item-content {
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-top: 12px
+}
+
+.post-raspberries {
+    background-image: url("img/raspberries.jpg");
+}
+
+.post-chocolate {
+    background-image: url("img/chocolate.jpg");
+}
+
+.banner-item-btn {
+    height: 45px;
+    display: inline-block;
+    line-height: 45px;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 18px;
+    position: absolute;
+    bottom: 24px;
+    right: 21px;
+}
+
