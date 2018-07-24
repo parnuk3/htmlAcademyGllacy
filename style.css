@@ -88,6 +88,7 @@ body {
 
 .clearfix::after {
     content: "";
+    display: table;
     clear: both;
 }
 
@@ -235,6 +236,7 @@ header-users-btn a {
     color:  #ffffff;
     font-family: "RobotoBold", sans-serif;
     text-align: left;
+    margin-bottom: 40px;
 }
 
 .post {
@@ -289,3 +291,64 @@ header-users-btn a {
     right: 21px;
 }
 
+/*Блок с преимуществами*/
+
+.features {
+    border-radius: 15px;
+    background-image: url("img/features-bg.jpg");
+    box-sizing: border-box;
+    width: 1146px;
+    padding: 25px 20px;
+    font-family: "RobotoRegular", sans-serif;
+    min-height: 306px;
+    margin-bottom: 40px;
+}
+
+.features-title {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+.feature-item {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 483px;
+    color:  #323232;
+    font-size: 16px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 58px;
+}
+
+.feature-item:nth-child(odd) {
+    margin-left: 80px;
+}
+
+.feature-item::before {
+    content: "";
+    position: absolute;
+    width: 49px;
+    height: 49px;
+    left: -58px;
+    top: -15px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.feature1::before {
+    background-image: url("img/feature1.png");
+}
+
+.feature2::before {
+    background-image: url("img/feature2.png");
+}
+
+.feature3::before {
+    background-image: url("img/feature3.png");
+}
+
+.feature4::before {
+    background-image: url("img/feature4.png");
+}
