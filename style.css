@@ -352,3 +352,28 @@ header-users-btn a {
 .feature4::before {
     background-image: url("img/feature4.png");
 }
+
+/* Оформление блога */
+
+.blog-item {
+    background-image: url("img/new-in-blog.jpg");
+    background-size: cover;
+    padding: 20px;
+    margin-right: 26px;
+    font-family: "RobotoRegular", sans-serif;
+}
+
+.blog-item-title {
+    margin: 0px;
+    padding: 0px;
+    margin-top: 10px;
+    font-family: "RobotoBold", sans-serif;
+    text-decoration: underline;
+    width: 285px;
+}
+
+.subscribe {
+    background-color:  #f8f7f4;
+    padding: 37px 27px;
+    font-family: "RobotoRegular", sans-serif;
+}
