@@ -372,8 +372,50 @@ header-users-btn a {
     width: 285px;
 }
 
+.subscribe-bg {
+    background-image: url(img/border-subscribe.jpg);
+    background-size: cover;
+    background-position: left;
+    margin-bottom: 40px;
+}
+
 .subscribe {
     background-color:  #f8f7f4;
-    padding: 37px 27px;
+    padding: 31px 19px;
     font-family: "RobotoRegular", sans-serif;
+    width: 547px;
+    height: 217px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.subscribe-description {
+    margin: 0;
+    padding: 0;
+}
+
+.subscribe-email {
+    margin-top: 38px;
+    width: 351px;
+    height: 42px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(178, 178, 178, 52);
+    background-color:  #ffffff;
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 16px;
+    color:  #999999;
+}
+
+.subscribe-btn {
+    float: right;
+    margin-top: 38px;
+    width: 129px;
+    height: 44px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
 }
