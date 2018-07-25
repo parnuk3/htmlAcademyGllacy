@@ -104,8 +104,13 @@ body {
     display: inline-block;
     color:  #ffffff;
     font-family: "RobotoBold", sans-serif;
-    text-align: left;
     text-decoration: none;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    text-align: center;
+    height: 44px;
+    line-height: 44px;
 }
 
 .header-users-btn {
@@ -129,6 +134,7 @@ header-users-btn a {
     line-height: 33px;
     font-size: 14px;
     box-shadow: none;
+    box-sizing: content-box;
     
 }
 .btn-header:not(.main-search) {
@@ -376,7 +382,7 @@ header-users-btn a {
     background-image: url(img/border-subscribe.jpg);
     background-size: cover;
     background-position: left;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 }
 
 .subscribe {
@@ -413,9 +419,70 @@ header-users-btn a {
     float: right;
     margin-top: 38px;
     width: 129px;
-    height: 44px;
-    border: 0;
+
+
+}
+
+/* Блок контактов */
+
+.contacts {
+    background-image: url(img/map.jpg);
+    width: 1200px;
+    height: 430px;
+    padding: 63px 27px;
+    margin: 0 auto;
     box-sizing: border-box;
+    position: relative;
+}
+.contacts::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 140px;
+    background-image: url(img/mark.png);
+    top: 139px;
+    left: 266px;
+}
+
+.contacts-form {
+    width: 302px;
+    height: 305px;
+    border-radius: 15px;
+    background-color:  rgba(255, 255, 255, 0.98);
+    float: right;
+    box-sizing: border-box;
+    padding: 31px 25px;
+    font-family: "RobotoRegular", sans-serif;
+    position: relative;
+}
+
+.contacts-form > span {
+    font-size: 14px;
+}
+
+.contacts-form .contacts-form-adress,
+.contacts-form .contacts-form-phone {
+    font-family: "RobotoBold", sans-serif;
     font-size: 18px;
-    text-align: center;
+    line-height: 24px;
+    display: inline-block;
+}
+
+.contacts-form .contacts-form-adress {
+    margin-bottom: 15px;
+}
+
+.contacts-form .contacts-form-phone {
+    margin: 6px 0 2px 0;
+}
+
+.contacts-form-btn {
+    width: 252px;
+    position: absolute;
+    bottom: 31px;
+    right: 25px;
+}
+
+.contacts-form-phone {
+    line-height: 24px;
 }
