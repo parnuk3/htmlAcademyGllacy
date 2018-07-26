@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="page-header">
+    <div class="contain bg1">
+       <header class="page-header">
         <div class="container">
           <div class="header-top clearfix">
            <div class="header-logo">
@@ -33,11 +34,11 @@
                <img src="" alt="">
            </figure>
            <div class="promo-slider-btns">
-               <input type="radio" class="slider-btn slider-btn-first" name="slider-btn" id="slider-btn-first" checked>
+               <input type="radio" checked class="slider-btn slider-btn-first" name="slider-btn" id="slider-btn-first"  data-bgs="bg1" onchange="slider()">
                <label for="slider-btn-first"></label>
-               <input type="radio" class="slider-btn slider-btn-second" name="slider-btn" id="slider-btn-second">
+               <input type="radio"  class="slider-btn slider-btn-second" name="slider-btn" id="slider-btn-second" data-bgs="bg2" onchange="slider()">
                <label for="slider-btn-second"></label>
-               <input type="radio" class="slider-btn slider-btn-third" name="slider-btn" id="slider-btn-third">
+               <input type="radio" class="slider-btn slider-btn-third" name="slider-btn" id="slider-btn-third" data-bgs="bg3" onchange="slider()">
                <label for="slider-btn-third"></label>
            </div>
            <a href="#" class="btn promo-btn">Давайте оба!</a>
@@ -116,6 +117,8 @@
         
        </div>
     </div>
-    <script src="script.js"></script>
+
+</div>
+<script src="script.js"></script>
 </body>
 </html>
