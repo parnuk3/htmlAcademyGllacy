@@ -39,10 +39,23 @@ body {
 .contain {
     margin: 0 auto;
     max-width: 1200px;
+    position: relative;
 }
 
 .bg1 {
     background-color: #849d8f;
+}
+
+.bg1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 78px;
+    width: 1045px;
+    height: 881px;
+    background-image: url("img/lighten1.png");
+    background-image: url("img/ice-cream2.png");
+    background-image: url("img/ice-cream1.png");
 }
 
 .bg2 {
@@ -268,7 +281,8 @@ header-users-btn a {
     border-radius: 15px;
     float: left;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: centcer;
+    background-size: cover;
 }
 
 .post:first-child {
