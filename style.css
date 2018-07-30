@@ -40,30 +40,49 @@ body {
     margin: 0 auto;
     max-width: 1200px;
     position: relative;
+    background-repeat: no-repeat;
+    background-position: 277px 83px, 591px 126px, 78px 0;
+    background-size: 372px 584px, 333px 519px, 1045px 881pz;
+}
+
+.contain::before {
+    content: "";
+    position: absolute;
+    top: 397px;
+    left: 268px;
+    font-family: "RobotoBold", sans-serif;
+    color:  #ffffff;
+    font-size: 60px;
+    text-align: center;
+    line-height: 60px;
+    width: 670px;
 }
 
 .bg1 {
     background-color: #849d8f;
+    background-image: url("img/ice-cream1.png"), url("img/ice-cream2.png"), url("img/lighten1.png");
 }
 
 .bg1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 78px;
-    width: 1045px;
-    height: 881px;
-    background-image: url("img/lighten1.png");
-    background-image: url("img/ice-cream2.png");
-    background-image: url("img/ice-cream1.png");
+    content: "Крем-брюле и пломбир с малиновым джемом";
 }
 
 .bg2 {
     background-color: #8996a6;
+    background-image: url("img/ice-cream3.png"), url("img/ice-cream4.png"), url("img/light2.png");
+}
+
+.bg2::before {
+    content: "Шоколадный пломбир и лимонный сорбет";
 }
 
 .bg3 {
     background-color: #9d8b84;
+    background-image: url("img/ice-cream5.png"), url("img/ice-cream6.png"), url("img/light3.png");
+}
+
+.bg3::before {
+    content: "Пломбир с помадкой и клубничный щербет";
 }
 
 .page-header {
@@ -211,7 +230,7 @@ header-users-btn a {
 
 /*Промо блок*/
 .promo {
-    height: 600px;
+    height: 471px;
     clear: both;
     position: relative;
 }
