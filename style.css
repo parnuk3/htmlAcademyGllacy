@@ -18,24 +18,24 @@
     font-weight: normal;
 }
 
-body {
-    padding: 0;
+/*ОБЩИЕ СТИЛИ*/
 
-    /*text style*/   
+body {
+    /*Отступы*/
+    padding: 0;
+    /*Текст*/   
     font-size: 16px;
     color: #323232;
+    font-family: "RobotoBold", sans-serif;
 }
 .container {
     box-sizing: border-box;
     margin: 0 auto;
     padding-left: 27px;
     padding-right: 27px;
-    padding-top: 10px;
-    padding-bottom: 25px;
     width: 1200px;
-    
 }
-
+    /*изменение фона для слайдера*/
 .contain {
     margin: 0 auto;
     max-width: 1200px;
@@ -50,8 +50,7 @@ body {
     position: absolute;
     top: 397px;
     left: 268px;
-    font-family: "RobotoBold", sans-serif;
-    color:  #ffffff;
+    color: #ffffff;
     font-size: 60px;
     text-align: center;
     line-height: 60px;
@@ -85,62 +84,12 @@ body {
     content: "Пломбир с помадкой и клубничный щербет";
 }
 
-.page-header {
-    color: #ffffff;
-    font-family: "RobotoBold", sans-serif;
-}
-
-.header-logo {
-    width: 154px;
-    height: 64px;
-    float: left;
-    margin-right: 13px;
-}
-
-.main-nav {
-    list-style: none;
-    float:left;
-    margin: 0;
-    padding: 0;
-    font-family: "RobotoBold", sans-serif;
-    margin-top: 10px;
-}
-.main-nav li {
-    float:left;
-}
-
-.main-nav li a {
-    /*text style*/
-    color:  #ffffff;
-    line-height: 18px;
-    text-align: left;
-    margin: 9px 13px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    border-bottom: 1px solid white;
-    display: block;  
-}
-
-.main-nav li a:hover {
-    border: 1px solid white;
-    border-radius: 50px;
-    background-color: white;
-    color: #323232;
-    padding: 9px 13px;
-    margin: 0;
-}
-
-.main-nav li a:active {
-   opacity: 0.8;
-}
-
 .clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
 
-/*Кнопки*/
 .btn {
     border-radius: 50px;
     background: -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
@@ -161,46 +110,99 @@ body {
     line-height: 44px;
 }
 
+/*СТИЛИ ШАПКИ*/
+
+.page-header {
+    padding-top: 9px;
+    color:  #ffffff;
+}
+
+.header-logo {
+    width: 154px;
+    height: 64px;
+    float: left;
+    margin-right: 13px;
+}
+
+.main-nav {
+    list-style: none;
+    float:left;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+.main-nav li {
+    float:left;
+}
+
+.main-nav li a {
+    /*text style*/
+    color: inherit;
+    line-height: 18px;
+    margin: 9px 13px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-bottom: 1px solid white;
+    display: block;
+}
+
+.main-nav li a:hover {
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: white;
+    color: #323232;
+    padding: 9px 13px;
+    margin: 0;
+}
+
+.main-nav li a:active {
+   opacity: 0.8;
+}
+    
+    /*Кнопки*/
+
 .header-users-btn {
     margin-top: 10px;
     float: right;
     display: inline-block;
 }
 
-header-users-btn a {
-    padding: 0;
-    margin: 0;
-}
-
 .btn-header {
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
-    margin-left: 10px;
-    float: left;
-    height: 33px;
+    box-shadow: none;
+    
+    /*Текст*/
     text-align: left;
     line-height: 33px;
     font-size: 14px;
-    box-shadow: none;
+      
+    /*Блочная модель*/
+    float: left;
     box-sizing: content-box;
-    
+    height: 33px;
+    margin-left: 10px;
 }
+
 .btn-header:not(.main-search) {
     padding-left: 44px;
+}
+
+.header-login,
+.header-cart,
+.main-search {
+    background-repeat: no-repeat;
+    background-position: 16px 50%;
 }
 
 .header-login {
     width: 62px;
     background-image: url("img/login.png");
-    background-repeat: no-repeat;
-    background-position: 16px 50%;
 }
 
 .header-cart {
     width: 86px;
     background-image: url("img/cart.png");
-    background-repeat: no-repeat;
-    background-position: 16px 50%;
 }
 
 .main-search {
@@ -208,11 +210,10 @@ header-users-btn a {
     display: block;
     width: 33px;
     background-image: url("img/search.png");
-    background-repeat: no-repeat;
     background-position: 50%;
 }
 
-/* контакты в шапке */
+    /* контакты в шапке */
 .header-contacts {
     clear: both;
     display: inline-block;
@@ -228,10 +229,9 @@ header-users-btn a {
     font-size: 22px;
 }
 
-/*Промо блок*/
+    /*Промо блок*/
 .promo {
-    height: 471px;
-    clear: both;
+    height: 534px;
     position: relative;
 }
 
