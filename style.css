@@ -132,73 +132,102 @@ body {
     margin-top: 10px;
 }
 .main-nav > li {
-    float:left;
+    display: inline-block;
     position: relative;
 }
+
 
 .main-nav > li > a {
     /*text style*/
     color: inherit;
     line-height: 18px;
-    margin: 6px 13px;
-    text-decoration: none;
+    padding: 6px 13px;
     border: 1px solid transparent;
-    border-bottom: 1px solid white;
     display: block;
-
 }
 
-.main-nav li a:hover {
+.main-nav > li > a:hover {
     border: 1px solid white;
     border-radius: 50px;
     background-color: white;
+    text-decoration: none;
     color: #323232;
     padding: 6px 13px;
     margin: 0;
 }
 
-.main-nav li a:active {
+.main-nav > li > a:active {
    opacity: 0.8;
 }
 
 .main-sub-nav {
-    display: none;
     position: absolute;
+    left: -7px;
+    top: 37px;
+    display: none;
+    width: 143px;
+    height: 171px;
+    padding: 10px 0;
+    box-sizing: border-box;
     border-radius: 5px;
     background-color:  #f8f7f4;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-    width: 143px;
-    height: 171px;
-    padding: 10px 6px;
     list-style-type: none;
     color:  #323232;
     font-family: "RobotoRegular", sans-serif;
     font-size: 14px;
     line-height: 16px;
-    box-sizing: border-box;
-    left: -7px;
-    top: 37px;
+    z-index: 10;
 }
 
-.main-sub-nav > li {
-    margin-bottom: 15px;
-    margin-top: 10px;
-    padding: 0 14px;
+.main-sub-nav li {
+    padding: 9px 20px 7px 20px;
 }
 
-.main-sub-nav > li:first-child {
-    padding-bottom: 12px;
-    margin-bottom: 0;
-    margin-top: 0;
-    border-bottom: 1px solid black;
+.main-sub-nav li:first-child {
+    padding: 0 6px;
     font-family: "RobotoBold", sans-serif;
-
 }
 
-.main-nav li a:hover + .main-sub-nav {
+.main-sub-nav li hr {
+    margin-top: 12px;
+    margin-bottom: 0;
+    background-color: #323232;
+}
+
+.main-sub-nav li span {
+    display: inline-block;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.main-nav > li:hover .main-sub-nav {
     display: block;
 }
+
+.main-nav > li:hover .main-sub-nav::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 143px;
+    height: 20px;
+}
+
+.main-sub-nav > li > a {
+    color: inherit;
+    text-decoration: none;
     
+}
+
+.main-sub-nav > li:not(:first-child):hover {
+    background-color:  #fbded8;
+}
+
+.main-sub-nav > li:not(:first-child):active {
+    opacity: 0.8;
+}
+
     /*Кнопки*/
 
 .header-users-btn {
