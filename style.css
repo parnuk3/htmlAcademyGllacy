@@ -301,6 +301,11 @@ header-users-btn a {
     background-image: url("img/chocolate.jpg");
 }
 
+.hot-offers-image {
+    width: 200px;
+    height: 200px;
+}
+
 .banner-item-btn {
     height: 45px;
     display: inline-block;
