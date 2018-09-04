@@ -14,12 +14,21 @@
                <img src="img/Logo.png" alt="Gllacy Shop" width="154" height="64">
            </div>
            <ul class="main-nav clearfix">
-               <li><a href="#">Каталог</a></li>
+               <li>
+                   <a href="#">Каталог</a>
+                   <ul class="main-sub-nav">
+                       <li><span>Новинки</span><hr></li>
+                       <li><a href="#">Сливочное</a></li>
+                       <li><a href="#">Щербеты</a></li>
+                       <li><a href="#">Фруктовый лед</a></li>
+                       <li><a href="#">Мелорин</a></li>
+                   </ul>
+               </li>
                <li><a href="#">Доставка и оплата</a></li>
                <li><a href="#">О Компании</a></li>
            </ul>
            <div class="header-users-btn clearfix">
-               <a href="#" class="btn btn-header main-search">П</a>
+               <a href="#" class="btn btn-header main-search"></a>
                <a href="#" class="btn btn-header header-login">Вход</a>
                <a href="#" class="btn btn-header header-cart">Пусто</a>
            </div>
@@ -30,9 +39,6 @@
            
         </div>
         <div class="promo">
-           <figure class="header-slider">
-               <img src="" alt="">
-           </figure>
            <div class="promo-slider-btns">
                <input type="radio" checked class="slider-btn slider-btn-first" name="slider-btn" id="slider-btn-first"  data-bgs="bg1" onchange="slider()">
                <label for="slider-btn-first"></label>

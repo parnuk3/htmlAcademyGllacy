@@ -18,88 +18,70 @@
     font-weight: normal;
 }
 
-body {
-    padding: 0;
+/*ОБЩИЕ СТИЛИ*/
 
-    /*text style*/   
+body {
+    /*Отступы*/
+    padding: 0;
+    /*Текст*/   
     font-size: 16px;
     color: #323232;
+    font-family: "RobotoBold", sans-serif;
 }
 .container {
     box-sizing: border-box;
     margin: 0 auto;
     padding-left: 27px;
     padding-right: 27px;
-    padding-top: 10px;
-    padding-bottom: 25px;
     width: 1200px;
-    
 }
-
+    /*изменение фона для слайдера*/
 .contain {
     margin: 0 auto;
     max-width: 1200px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 277px 83px, 591px 126px, 78px 0;
+    background-size: 372px 584px, 333px 519px, 1045px 881pz;
+}
+
+.contain::before {
+    content: "";
+    position: absolute;
+    top: 397px;
+    left: 268px;
+    color: #ffffff;
+    font-size: 60px;
+    text-align: center;
+    line-height: 60px;
+    width: 670px;
 }
 
 .bg1 {
     background-color: #849d8f;
+    background-image: url("img/ice-cream1.png"), url("img/ice-cream2.png"), url("img/lighten1.png");
+}
+
+.bg1::before {
+    content: "Крем-брюле и пломбир с малиновым джемом";
 }
 
 .bg2 {
     background-color: #8996a6;
+    background-image: url("img/ice-cream3.png"), url("img/ice-cream4.png"), url("img/light2.png");
+}
+
+.bg2::before {
+    content: "Шоколадный пломбир и лимонный сорбет";
 }
 
 .bg3 {
     background-color: #9d8b84;
+    background-image: url("img/ice-cream5.png"), url("img/ice-cream6.png"), url("img/light3.png");
 }
 
-.page-header {
-    color: #ffffff;
-    font-family: "RobotoBold", sans-serif;
-}
-
-.header-logo {
-    width: 154px;
-    height: 64px;
-    float: left;
-    margin-right: 13px;
-}
-
-.main-nav {
-    list-style: none;
-    float:left;
-    margin: 0;
-    padding: 0;
-    font-family: "RobotoBold", sans-serif;
-    margin-top: 10px;
-}
-.main-nav li {
-    float:left;
-}
-
-.main-nav li a {
-    /*text style*/
-    color:  #ffffff;
-    line-height: 18px;
-    text-align: left;
-    margin: 9px 13px;
-    text-decoration: none;
-    border: 1px solid transparent;
-    border-bottom: 1px solid white;
-    display: block;  
-}
-
-.main-nav li a:hover {
-    border: 1px solid white;
-    border-radius: 50px;
-    background-color: white;
-    color: #323232;
-    padding: 9px 13px;
-    margin: 0;
-}
-
-.main-nav li a:active {
-   opacity: 0.8;
+.bg3::before {
+    content: "Пломбир с помадкой и клубничный щербет";
 }
 
 .clearfix::after {
@@ -108,7 +90,6 @@ body {
     clear: both;
 }
 
-/*Кнопки*/
 .btn {
     border-radius: 50px;
     background: -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
@@ -129,46 +110,168 @@ body {
     line-height: 44px;
 }
 
+/*СТИЛИ ШАПКИ*/
+
+.page-header {
+    padding-top: 9px;
+    color:  #ffffff;
+}
+
+.header-logo {
+    width: 154px;
+    height: 64px;
+    float: left;
+    margin-right: 13px;
+}
+
+.main-nav {
+    list-style: none;
+    float:left;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+.main-nav > li {
+    display: inline-block;
+    position: relative;
+}
+
+
+.main-nav > li > a {
+    /*text style*/
+    color: inherit;
+    line-height: 18px;
+    padding: 6px 13px;
+    border: 1px solid transparent;
+    display: block;
+}
+
+.main-nav > li > a:hover {
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: white;
+    text-decoration: none;
+    color: #323232;
+    padding: 6px 13px;
+    margin: 0;
+}
+
+.main-nav > li > a:active {
+   opacity: 0.8;
+}
+
+.main-sub-nav {
+    position: absolute;
+    left: -7px;
+    top: 37px;
+    display: none;
+    width: 143px;
+    height: 171px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color:  #f8f7f4;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    list-style-type: none;
+    color:  #323232;
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    z-index: 10;
+}
+
+.main-sub-nav li {
+    padding: 9px 20px 7px 20px;
+}
+
+.main-sub-nav li:first-child {
+    padding: 0 6px;
+    font-family: "RobotoBold", sans-serif;
+}
+
+.main-sub-nav li hr {
+    margin-top: 12px;
+    margin-bottom: 0;
+    background-color: #323232;
+}
+
+.main-sub-nav li span {
+    display: inline-block;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.main-nav > li:hover .main-sub-nav {
+    display: block;
+}
+
+.main-nav > li:hover .main-sub-nav::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 143px;
+    height: 20px;
+}
+
+.main-sub-nav > li > a {
+    color: inherit;
+    text-decoration: none;
+    
+}
+
+.main-sub-nav > li:not(:first-child):hover {
+    background-color:  #fbded8;
+}
+
+.main-sub-nav > li:not(:first-child):active {
+    opacity: 0.8;
+}
+
+    /*Кнопки*/
+
 .header-users-btn {
     margin-top: 10px;
     float: right;
     display: inline-block;
 }
 
-header-users-btn a {
-    padding: 0;
-    margin: 0;
-}
-
 .btn-header {
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
-    margin-left: 10px;
-    float: left;
-    height: 33px;
+    box-shadow: none;
+    
+    /*Текст*/
     text-align: left;
     line-height: 33px;
     font-size: 14px;
-    box-shadow: none;
+      
+    /*Блочная модель*/
+    float: left;
     box-sizing: content-box;
-    
+    height: 33px;
+    margin-left: 10px;
 }
+
 .btn-header:not(.main-search) {
     padding-left: 44px;
+}
+
+.header-login,
+.header-cart,
+.main-search {
+    background-repeat: no-repeat;
+    background-position: 16px 50%;
 }
 
 .header-login {
     width: 62px;
     background-image: url("img/login.png");
-    background-repeat: no-repeat;
-    background-position: 16px 50%;
 }
 
 .header-cart {
     width: 86px;
     background-image: url("img/cart.png");
-    background-repeat: no-repeat;
-    background-position: 16px 50%;
 }
 
 .main-search {
@@ -176,11 +279,10 @@ header-users-btn a {
     display: block;
     width: 33px;
     background-image: url("img/search.png");
-    background-repeat: no-repeat;
     background-position: 50%;
 }
 
-/* контакты в шапке */
+    /* контакты в шапке */
 .header-contacts {
     clear: both;
     display: inline-block;
@@ -196,10 +298,9 @@ header-users-btn a {
     font-size: 22px;
 }
 
-/*Промо блок*/
+    /*Промо блок*/
 .promo {
-    height: 600px;
-    clear: both;
+    height: 534px;
     position: relative;
 }
 
@@ -268,7 +369,8 @@ header-users-btn a {
     border-radius: 15px;
     float: left;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: centcer;
+    background-size: cover;
 }
 
 .post:first-child {
