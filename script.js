@@ -11,11 +11,30 @@ var slider = function () {
     bg.classList.add(slide);
 }
 
-var product1 = {
-    price: '310Р/кг',
-    description: 'Сливочное с апельсиновым джемом и цитрусовой стружкой',
-    imgUrl: 'img/raspberries.jpg'
-}
+var dataCard = [
+	{
+		price: '310Р/кг',
+    	description: 'Сливочное с апельсиновым джемом и цитрусовой стружкой',
+    	imgUrl: 'img/card1.jpg'	
+	},
+	{
+		price: '380Р/кг',
+    	description: 'Сливочно-кофейное с кусочками шоколада',
+    	imgUrl: 'img/card2.jpg'
+	},
+	{
+		price: '355Р/кг',
+    	description: 'Сливочно-клубничное с присыпкой из белого шоколада',
+    	imgUrl: 'img/card3.jpg'
+	},
+	{
+		price: '415Р/кг',
+    	description: 'Сливочное крем-брюле с карамельной подливкой',
+    	imgUrl: 'img/card4.jpg'
+	}
+];
+
+
 
 var makeElement = function (tagName, className, textContent) {
     var element = document.createElement(tagName);
@@ -45,7 +64,11 @@ var createCard = function (product) {
 }
 
 var cardList = document.querySelector('.hot-offers');
-var cardItem = createCard (product1);
-cardList.appendChild(cardItem);
+for (var i = 0; i < dataCard.length; i++) {
+	var currentCard = dataCard[i];
+	var cardItem = createCard (currentCard);
+	cardList.appendChild(cardItem);
+}
+
 
 
