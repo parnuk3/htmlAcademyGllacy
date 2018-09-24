@@ -1,5 +1,5 @@
-var bg = document.querySelector(".contain");
-var backgrounds = ["bg1", "bg2", "bg3"];
+var bg = document.querySelector(".page-background");
+var backgrounds = ["cream1-bg", "cream2-bg", "cream3-bg"];
 
 
 var slider = function () {
