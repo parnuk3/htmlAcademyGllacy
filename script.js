@@ -13,22 +13,22 @@ var slider = function () {
 
 var dataCard = [
 	{
-		price: '310Р/кг',
+		price: '310₽',
     	description: 'Сливочное с апельсиновым джемом и цитрусовой стружкой',
     	imgUrl: 'img/card1.jpg'	
 	},
 	{
-		price: '380Р/кг',
+		price: '380₽',
     	description: 'Сливочно-кофейное с кусочками шоколада',
     	imgUrl: 'img/card2.jpg'
 	},
 	{
-		price: '355Р/кг',
+		price: '355₽',
     	description: 'Сливочно-клубничное с присыпкой из белого шоколада',
     	imgUrl: 'img/card3.jpg'
 	},
 	{
-		price: '415Р/кг',
+		price: '415₽',
     	description: 'Сливочное крем-брюле с карамельной подливкой',
     	imgUrl: 'img/card4.jpg'
 	}
@@ -52,12 +52,14 @@ var createCard = function (product) {
     pictures.alt =  product.description;
     listItem.appendChild(pictures);
     var hit = makeElement ('img', 'hot-offers-hit');
-    hit.src = '#';
+    hit.src = 'img/hit.png';
     hit.alt =  'Хит';
     listItem.appendChild(hit);
     var description = makeElement ('p', 'hot-offers-description', product.description);
     listItem.appendChild(description);
     var price = makeElement ('span', 'hot-offers-price', product.price);
+    var priceUnits = makeElement ('span', 'hot-offers-price-units', '/кг');
+    price.appendChild(priceUnits);
     listItem.appendChild(price);
     
     return listItem;

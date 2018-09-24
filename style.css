@@ -103,7 +103,7 @@ body {
     /*центровщик*/
 .container {
     margin: 0 auto;
-    width: 1146px;
+    max-width: 1146px;
 }
 
 .clearfix::after {
@@ -165,6 +165,12 @@ body {
     color:  #ffffff;
 }
 
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .header-logo {
     width: 154px;
     height: 64px;
@@ -175,12 +181,9 @@ body {
 .main-nav {
     display: flex;
     flex-wrap: wrap;
-    width: 650px;
-    margin: 0;
+    margin-right: auto;
     margin-top: 14px;
     padding: 0;
-    float:left;
-
     list-style: none;
 }
 
@@ -385,7 +388,7 @@ body {
 .header-contacts {
     display: inline-block;
     float: right;
-    margin-top: 15px;
+    margin-top: -2px;
     
     text-align: right;
     font-weight: bold;
@@ -405,6 +408,7 @@ body {
 
     /*Промо блок*/
 .promo {
+    clear: both;
     height: 530px;
     position: relative;
 }
@@ -471,30 +475,33 @@ body {
 /*баннеры*/
 
 .banners {
-    color:  #ffffff;
-    font-family: "RobotoBold", sans-serif;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 40px;
+    
+    font-family: "Roboto", sans-serif;
+    color:  #ffffff;
+    text-align: left;
+    font-weight: 700;
 }
 
 .post {
-    box-sizing: border-box;
-    width: 560px;
-    height: 229px;
-    border-radius: 15px;
-    float: left;
-    background-repeat: no-repeat;
-    background-position: centcer;
-    background-size: cover;
-}
-
-.post:first-child {
-    margin-right: 26px;
+    
 }
 
 .banner-item {
-    padding: 23px 21px 23px 20px;
     position: relative;
+    box-sizing: border-box;
+    width: 560px;
+    min-height: 229px;
+    padding: 15px 15px 80px 20px;
+    border-radius: 15px;
+    
+    color: white;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .banner-item-title {
@@ -511,28 +518,80 @@ body {
 }
 
 .post-raspberries {
+    background-color: #b70e40;
     background-image: url("img/raspberries.jpg");
 }
 
 .post-chocolate {
+    background-color: #3c1a09;
     background-image: url("img/chocolate.jpg");
 }
 
-.hot-offers-image {
-    width: 200px;
-    height: 200px;
-}
-
 .banner-item-btn {
-    height: 45px;
-    display: inline-block;
-    line-height: 45px;
-    padding-left: 22px;
-    padding-right: 22px;
-    font-size: 18px;
     position: absolute;
     bottom: 24px;
     right: 21px;
+    display: inline-block;
+    padding: 13px 22px;
+    
+    line-height: 20px;
+    font-size: 18px;   
+}
+
+/*Оформление блока с хитами*/
+
+.hot-offers {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 37px;
+}
+
+.hot-offers-item {
+    position: relative;
+}
+
+.hot-offers-image {
+    width: 266px;
+    height: 266px;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.hot-offers-hit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 61px;
+    height: 61px;
+}
+
+.hot-offers-description {
+    max-width: 266px;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.hot-offers-price {
+    position: absolute;
+    top: 208px;
+    left: 0;
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 45px;
+}
+
+.hot-offers-price-units {
+    font-size: 30px;
 }
 
 /*Блок с преимуществами*/
