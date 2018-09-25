@@ -642,23 +642,23 @@ body {
     width: 49px;
     height: 49px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(img/features.png);
 }
 
 .feature1::before {
-    background-image: url("img/feature1.png");
+    background-position: 0 0;
 }
 
 .feature2::before {
-    background-image: url("img/feature2.png");
+    background-position: -100px 0;
 }
 
 .feature3::before {
-    background-image: url("img/feature3.png");
+    background-position: -200px 0;
 }
 
 .feature4::before {
-    background-image: url("img/feature4.png");
+    background-position: -300px 0;
 }
 
 /* Оформление блога */
