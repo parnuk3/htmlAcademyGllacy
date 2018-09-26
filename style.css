@@ -73,6 +73,10 @@ body {
     font-weight: 700;
 }
 
+.catalog-page {
+    background-color: #849d8f;
+}
+
 .cream1-bg {
     background-color: #849d8f;
     background-image: url("img/cream1.png");
@@ -177,7 +181,6 @@ body {
 .header-logo {
     width: 154px;
     height: 64px;
-    float: left;
     margin-right: 10px;
 }
 
@@ -312,7 +315,6 @@ body {
     justify-content: flex-end;
     width: 300px;
     margin-top: 14px;
-    float: right;
 }
 
 .btn-header {
