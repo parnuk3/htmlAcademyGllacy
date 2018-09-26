@@ -138,7 +138,9 @@ body {
     background: -ms-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
     background: linear-gradient(0deg, #e74a35 0%, #f26843 100%);
     
-    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64); 
+    box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -156,6 +158,7 @@ body {
     background: linear-gradient(0deg, #f26843 0%, #e74a35 100%);
     background-color:  rgba(0, 0, 0, 0.07);
     box-shadow: inset 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+    outline: none;
 }
 
 /*СТИЛИ ШАПКИ*/
@@ -663,40 +666,58 @@ body {
 
 /* Оформление блога */
 
+.blog-and-subscribe-layout {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 39px;
+}
+
+.blog-item,
+.subscribe-bg {
+    box-sizing: border-box;
+    width: 560px;
+    border-radius: 15px;
+    min-height: 220px;
+}
+
 .blog-item {
-    background-image: url("img/new-in-blog.jpg");
-    background-size: cover;
     padding: 20px;
     margin-right: 26px;
-    font-family: "RobotoRegular", sans-serif;
+    font-family: "Roboto", sans-serif;
+    background-image: url("img/new-in-blog.jpg");
+    background-size: cover;
 }
 
 .blog-item-title {
+    width: 285px;
     margin: 0px;
     padding: 0px;
     margin-top: 10px;
-    font-family: "RobotoBold", sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
     text-decoration: underline;
-    width: 285px;
 }
 
 .subscribe-bg {
+    min-height: 220px;
     background-image: url(img/border-subscribe.jpg);
     background-size: cover;
     background-position: left;
-    margin-bottom: 15px;
+    padding: 6px;
+    
 }
 
 .subscribe {
-    background-color:  #f8f7f4;
-    padding: 31px 19px;
-    font-family: "RobotoRegular", sans-serif;
-    width: 547px;
-    height: 217px;
     box-sizing: border-box;
+    width: 549px;
+    min-height: 211px;
+    padding: 31px 19px;
     border-radius: 10px;
-    margin-top: 6px;
-    margin-left: 6px;
+
+    color: #323232; 
+    font-family: "Roboto", sans-serif;
+    
+    background-color:  #f8f7f4; 
 }
 
 .subscribe-description {
@@ -705,57 +726,60 @@ body {
 }
 
 .subscribe-email {
-    margin-top: 38px;
-    width: 351px;
+    box-sizing: border-box;
+    width: 368px;
     height: 42px;
+    margin-top: 38px;
     padding-left: 15px;
+    padding-right: 15px;
     border-radius: 5px;
     border: 1px solid rgba(178, 178, 178, 52);
-    background-color:  #ffffff;
-    font-family: "RobotoRegular", sans-serif;
+    
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     color:  #999999;
+    
+    background-color:  #ffffff;
 }
 
 .subscribe-btn {
     float: right;
     margin-top: 38px;
     width: 129px;
-
-
 }
 
 /* Блок контактов */
 
 .contacts {
-    background-image: url(img/map.jpg);
+    position: relative;
+    box-sizing: border-box;
     width: 1200px;
     height: 430px;
     padding: 63px 27px;
     margin: 0 auto;
-    box-sizing: border-box;
-    position: relative;
+    background-image: url(img/map.jpg);
 }
 .contacts::before {
     content: "";
     position: absolute;
+    top: 139px;
+    left: 266px;
     width: 80px;
     height: 140px;
     background-image: url(img/mark.png);
-    top: 139px;
-    left: 266px;
 }
 
 .contacts-form {
+    box-sizing: border-box;
+    float: right;
+    position: relative;
     width: 302px;
     height: 305px;
-    border-radius: 15px;
-    background-color:  rgba(255, 255, 255, 0.98);
-    float: right;
-    box-sizing: border-box;
     padding: 31px 25px;
-    font-family: "RobotoRegular", sans-serif;
-    position: relative;
+    border-radius: 15px;
+    
+    font-family: "Roboto", sans-serif;
+    background-color:  rgba(255, 255, 255, 0.98);
 }
 
 .contacts-form > span {
@@ -764,10 +788,11 @@ body {
 
 .contacts-form .contacts-form-adress,
 .contacts-form .contacts-form-phone {
-    font-family: "RobotoBold", sans-serif;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    display: inline-block;
+    font-weight: 700;
 }
 
 .contacts-form .contacts-form-adress {
@@ -779,10 +804,10 @@ body {
 }
 
 .contacts-form-btn {
-    width: 252px;
     position: absolute;
     bottom: 31px;
     right: 25px;
+    width: 252px;
 }
 
 .contacts-form-phone {
@@ -791,21 +816,23 @@ body {
 
 /* стили подвала */
 
-.page-footer {
-    height: 68px;
-    box-sizing: border-box;
+
+.page-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 103px; 
 }
 
 .footer-socials {
-    margin-top: 26px;
-    display: inline-block;
+    display: flex;
+    width: 400px;
 }
 
 .social {
     width: 34px;
     height: 34px;
     display: inline-block;
-    float: left;
     margin-right: 11px;
     background-size: 32px 32px;
     background-position: center;
@@ -832,17 +859,23 @@ body {
 
 .footer-links {
     display: flex;
-    flex-wrap: nowrap;
-    width: 500px;
-    margin-left: 225px;
+    flex-wrap: wrap;
+    width: 350px;
     padding: 0;
+    padding-left: 22px;
+    margin-right: auto;
 }
 
 .footer-links-item {
+    position: relative;
+    margin-right: 32px;
+    
     font-family: "Roboto", sans-serif;
     color:  #ffffff;
     font-size: 13px;
-    position: relative;
+    line-height: 20px;
+    
+    
 }
 
 .footer-links-item:hover {
@@ -857,13 +890,13 @@ body {
 .footer-links-item:hover::before {
     content: "";
     position: absolute;
+    top: 4px;
+    left: -22px;
     width: 15px;
     height: 13px;
     background-image: url(img/heart.png);
     background-position: center;
-    background-repeat: no-repeat;
-    top: 4px;
-    left: -22px;
+    background-repeat: no-repeat;   
 }
 
 .footer-links-item:active::before {
@@ -871,8 +904,7 @@ body {
 }
 
 .copyright {
-    margin-top: 9px;
-    float: right;
+    padding-bottom: 10px;
 }
 
 .copyright span {
