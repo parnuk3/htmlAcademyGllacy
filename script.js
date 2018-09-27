@@ -11,6 +11,30 @@ var slider = function () {
     bg.classList.add(slide);
 }
 
+var dataCardHit = [
+	{
+		price: '310₽',
+    	description: 'Сливочное с апельсиновым джемом и цитрусовой стружкой',
+    	imgUrl: 'img/card1.jpg'	
+	},
+	{
+		price: '380₽',
+    	description: 'Сливочно-кофейное с кусочками шоколада',
+    	imgUrl: 'img/card2.jpg'
+	},
+	{
+		price: '355₽',
+    	description: 'Сливочно-клубничное с присыпкой из белого шоколада',
+    	imgUrl: 'img/card3.jpg'
+	},
+	{
+		price: '415₽',
+    	description: 'Сливочное крем-брюле с карамельной подливкой',
+    	imgUrl: 'img/card4.jpg'
+	}
+    
+];
+
 var dataCard = [
 	{
 		price: '310₽',
@@ -32,7 +56,9 @@ var dataCard = [
     	description: 'Сливочное крем-брюле с карамельной подливкой',
     	imgUrl: 'img/card4.jpg'
 	}
+    
 ];
+
 
 
 
@@ -45,32 +71,39 @@ var makeElement = function (tagName, className, textContent) {
     return element;
 }
 
-var createCard = function (product) {
-    var listItem = makeElement ('li', 'hot-offers-item');
-    var pictures = makeElement ('img', 'hot-offers-image');
+var createCard = function (product, isHit) {
+    var listItem = makeElement ('li', 'product-item');
+    var pictures = makeElement ('img', 'product-image');
     pictures.src = product.imgUrl;
     pictures.alt =  product.description;
     listItem.appendChild(pictures);
-    var hit = makeElement ('img', 'hot-offers-hit');
-    hit.src = 'img/hit.png';
-    hit.alt =  'Хит';
-    listItem.appendChild(hit);
-    var description = makeElement ('p', 'hot-offers-description', product.description);
+    if (isHit) {
+        var hit = makeElement ('img', 'product-hit');
+        hit.src = 'img/hit.png';
+        hit.alt =  'Хит';
+        listItem.appendChild(hit);
+    }
+    var description = makeElement ('p', 'product-description', product.description);
     listItem.appendChild(description);
-    var price = makeElement ('span', 'hot-offers-price', product.price);
-    var priceUnits = makeElement ('span', 'hot-offers-price-units', '/кг');
+    var price = makeElement ('span', 'product-price', product.price);
+    var priceUnits = makeElement ('span', 'product-price-units', '/кг');
     price.appendChild(priceUnits);
     listItem.appendChild(price);
     
     return listItem;
 }
 
-var cardList = document.querySelector('.hot-offers');
-for (var i = 0; i < dataCard.length; i++) {
-	var currentCard = dataCard[i];
-	var cardItem = createCard (currentCard);
-	cardList.appendChild(cardItem);
+var renderProducts = function (productsArray, parentObject, isHit) {
+    
+    var cardList = document.querySelector(parentObject);
+    for (var i = 0; i < productsArray.length; i++) {
+        var currentCard = productsArray[i];
+        var cardItem = createCard (currentCard, isHit);
+        cardList.appendChild(cardItem);
+    }
 }
+
+
 
 
 

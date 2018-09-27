@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-background catalog-page">
+       <header class="page-header">
+        <div class="container clearfix">
+            <div class="header-top">
+               <div class="header-logo">
+                   <a href="index.html"><img src="img/Logo.png" alt="Gllacy Shop" width="154" height="64"></a>
+               </div>
+               <ul class="main-nav">
+                   <li>
+                       <a href="#"><span>Каталог</span></a>
+                       <ul class="main-sub-nav">
+                           <li><span>Новинки</span><hr></li>
+                           <li><a>Сливочное</a></li>
+                           <li><a href="#">Щербеты</a></li>
+                           <li><a href="#">Фруктовый лед</a></li>
+                           <li><a href="#">Мелорин</a></li>
+                       </ul>
+                   </li>
+                   <li><a href="#"><span>Доставка и оплата</span></a></li>
+                   <li><a href="#"><span>О Компании</span></a></li>
+               </ul>
+               <div class="header-users-btn">
+                   <a href="#" class="btn btn-header main-search"></a>
+                   <a href="#" class="btn btn-header header-login">Вход</a>
+                   <a href="#" class="btn btn-header header-cart">Пусто</a>
+               </div>
+           </div>
+           <div class="header-bottom">
+               <ul class="breadcrumbs">
+                   <li><a href="index.html">Главная</a></li>
+                   <li><a href="#">Каталог</a></li>
+                   <li>Сливочное</li>
+               </ul>
+               <div class="header-contacts">
+                   <span class="header-schedule">С 10 до 20, ежедневно</span><br>
+                   <span class="header-phone">8 812 450-25-25</span>
+               </div>
+          </div> 
+        </div>
+    </header>
+    <main class="catalog">
+       <div class="container">
+           <h1 class="main-title">Сливочное мороженое</h1>
+           <form action="#" method="get" class="catalog-filter">
+            <div class="catalog-filter-top">
+                <div>
+                   <span  class="catalog-filter-field-title">Сортировка:</span>
+                   <select name="sort" id="sort-field"  class="catalog-filter-field-group">
+                       <option value="popular">по популярности</option>
+                   </select>
+                </div>
+               <div class="price-filter catalog-filter-field">
+                   <span class="catalog-filter-field-title">Цена: <output class="price-filter-min">100</output> руб. - <output class="price-filter-max">500</output> руб.</span>
+                   <div class="catalog-filter-field-group">
+                       <input type="range">
+                       <input type="range">
+                   </div>
+               </div>
+               <div class="fat-filter">
+                   <span  class="catalog-filter-field-title">Жирность</span>
+                   <div class="catalog-filter-field-group">
+                       <input type="radio" name="fat">
+                       <label for="">0%</label>
+                       <input type="radio" name="fat">
+                       <label for="">до 10%</label>
+                       <input type="radio" name="fat">
+                       <label for="">до 30%</label>
+                       <input type="radio" name="fat">
+                       <label for="">выше 30%</label>
+                   </div>
+                </div>
+               </div>
+             <div class="catalog-filter-bottom">  
+               <div class="checkbox-area">
+                   <span  class="catalog-filter-field-title">Наполнители:</span>
+                   <div class="catalog-filter-field-group">
+                       <input type="checkbox" name="">
+                       <label for="">шоколадные</label>
+                       <input type="checkbox" name="">
+                       <label for="">сахарные присыпки</label>
+                       <input type="checkbox" name="">
+                       <label for="">фрукты</label>
+                       <input type="checkbox" name="">
+                       <label for="">сиропы</label>
+                       <input type="checkbox" name="">
+                       <label for="">джемы</label>
+                   </div>
+               </div>
+               <input type="submit" value="Применить" class="btn btn-filter">
+            </div>
+           </form>
+           <ul class="catalog-products">
+               <!-- продукты из js /!-->
+           </ul>
+           <div class="paginator">
+              <a href="" class="prev-page"></a>
+              <ul>
+                  <li><a href=""></a></li> 
+                  <li><a href=""></a></li> 
+                  <li><a href=""></a></li> 
+                  <li><a href=""></a></li> 
+                  <li><a href=""></a></li> 
+              </ul>
+              <a href="" class="next-page"></a>
+           </div>
+        </div>
+    </main>
+    <div class="page-footer">
+      <div class="container">
+        <div class="footer-socials">
+            <a class="social social-tw" href="#"></a>
+            <a class="social social-inst" href="#"></a>
+            <a class="social social-fb" href="#"></a>
+            <a class="social social-vk" href="#"></a>
+        </div>
+        <div class="footer-links">
+            <a class="footer-links-item" href="#">Для поставщиков</a>
+            <a class="footer-links-item" href="#">Наши документы</a>
+            <a class="footer-links-item" href="#">О производстве</a>
+            <a class="footer-links-item" href="#">Экологические стандарты</a>
+        </div>
+        <div class="copyright">
+            <img class="footer-logo" src="img/logo_academy.png" alt="html academy"><br>
+            <span>Сделано в <a href="#">HTML Academy</a> &copy; 2017</span>
+        </div>
+       </div>
+    </div>
+
+</div>
+<script src="script.js"></script>
+<script>renderProducts(dataCard, '.catalog-products', false)</script>
+</body>
+</html>
