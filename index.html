@@ -37,10 +37,7 @@
            <span class="header-schedule">С 10 до 20, ежедневно</span><br>
            <span class="header-phone">8 812 450-25-25</span>
        </div>
-           
-        
-        
-        </div>
+     </div>
     </header>
     
     <main>
@@ -129,7 +126,25 @@
     </div>
 
 </div>
+<div class="modal modal-search">
+	<form action="#" method="get">
+		<label>
+			<input type="text" id="search-field" name="search" placeholder="Что ищем?">
+		</label>
+	</form>
+</div>
+
+<div class="modal modal-login">
+	<form action="#" method="post" class="clearfix">
+		<input type="email" id="login-field" name="login" placeholder="Электронная почта" class="modal-login-field">
+		<input type="password" id="password-field" name="password" placeholder="Пароль" class="modal-login-field">
+		<input type="submit" name="submit-btn" value="Войти" class="btn">
+		<div class="login-links">
+			<a href="#">Забыли пароль?</a><br>
+			<a href="#">Новая регистрация</a>
+		</div>
+	</form>
+</div>
 <script src="script.js"></script>
-<script>renderProducts(dataCardHit, '.hot-offers', true)</script>
 </body>
 </html>
