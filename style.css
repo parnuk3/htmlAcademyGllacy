@@ -106,6 +106,7 @@ main,
     text-decoration: none;
     font-weight: bold;
     border-radius: 23px;
+    border: none;
     
     background-color: #e74a35;
     background: -webkit-linear-gradient(90deg, #e74a35 0%, #f26843 100%);
@@ -481,7 +482,7 @@ main,
     padding-top: 9px;
     padding-left: 9px;
     padding-right: 10px;
-    margin-bottom: -60px
+    margin-bottom: 20px;
 }
 
 .hot-offers-item:hover {
@@ -489,11 +490,14 @@ main,
     border-radius: 5px;
     background-color:  rgba(255, 255, 255, 0.2);
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    margin-bottom: -63px;
 }
 
 .hot-offers-item:hover .btn {
+    position: relative;
     z-index: 2;
     top: 0;
+    left: auto;
 }
 
 .hot-offers-item:nth-of-type(4n) {
@@ -545,8 +549,9 @@ main,
 }
 
 .hot-offers-item .btn {
-    position: relative;
-    top: -100px;
+    position: absolute;
+    top: 0px;
+    left: 0;
     z-index: -1;
     margin-top: 20px;
     margin-bottom: 17px;
@@ -555,6 +560,7 @@ main,
 /*блок с преимуществами*/
 
 .features {
+    margin-bottom: 40px;
     padding: 27px 21px;
     padding-bottom: 0;
     min-width: 540px;
@@ -626,9 +632,103 @@ main,
     line-height: 22px;
 }
 
+/*блок с новостями и подпиской*/
 
+.new-in-blog,
+.subscribe {
+    box-sizing: border-box;
+    display: block;
+    width: 560px;
+    height: 220px;
+    border-radius: 15px;
+    color: #323232;
+}
 
+.new-in-blog {
+    padding: 23px 20px;
+    margin-right: 26px;
+    background-color: white;
+    background-image: url("img/new-in-blog.jpg"); /*добавить полноразмерный фон*/
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
 
+.new-in-blog h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+}
+
+.new-in-blog p {
+    max-width: 290px;
+    padding: 0;
+    margin: 0;
+    margin-top: 7px;
+}
+
+.new-in-blog a {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+    color: inherit;
+}
+
+.new-in-blog a:hover {
+    color: #e84d37;
+}
+
+.new-in-blog a:active {
+    color: #fb7f59;
+}
+
+.subscribe {
+    width: 548px;
+    padding: 35px 21px;
+    border: 6px solid transparent;
+    background-color: #f8f7f4;
+    background-image: 
+        linear-gradient(#f8f7f4,#f8f7f4),
+        url("img/border-subscribe.jpg");
+    background-clip: padding-box, border-box;
+    background-position: center center, -7px;
+    background-repeat: no-repeat;
+    background-size: auto, 560px 220px;
+    
+}
+
+.subscribe p {
+    margin: 0;
+    margin-bottom: 35px;;
+    padding: 0;
+    color: #5a5a5a;
+    line-height: 22px;
+}
+
+.subscribe form {
+    margin: 0;
+    padding: 0;
+}
+
+.subscribe input[name="subscribe-email"] {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 340px;
+    margin-right: 10px;
+    padding: 10px 15px;
+    line-height: 24px;
+    color: #999999;
+    border: 1px solid #999999;
+    border-color: rgba(178, 178, 178, 52);
+    border-radius: 5px;
+}
+
+/*блок с контактами*/
+
+.contacts {
+    clear: both;
+}
 
 
 
