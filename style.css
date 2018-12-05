@@ -65,7 +65,7 @@ main,
     margin: 0 auto;
     padding-left: 27px;
     padding-right: 27px;
-    background-color: #859e90;
+    
 }
 
 /*доступное скрытие текста*/
@@ -88,11 +88,6 @@ main,
     content: "";
     display: table;
     clear: both;
-}
-
-/*скрытие элементов*/
-.visually-hidden {
-    
 }
 
 /*кнопки*/
@@ -139,15 +134,21 @@ main,
     box-shadow: inset 0px 2px 2px 0px #ac1000;
 }
 
+.common-bg {
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #859e90;
+}
+
+
 /*СТИЛИ ШАПКИ*/
 
 .page-header {
     position: relative;
     padding-top: 23px;
-    padding-bottom: 100px;
-    
+    padding-bottom: 80px;
+    z-index: 1;
     color: white;
-    background-color: #859e90;
 }
 
 .page-header .logo {
@@ -292,12 +293,12 @@ main,
     list-style: none;
 }
 
-.users-navigation > li > a:hover {
+.users-navigation > li > a[href]:hover {
     background-color: #f8f7f4;
     color: #323232;
 }
 
-.users-navigation > li > a:active {
+.users-navigation > li > a[href]:active {
     color: #323232;
     background-color: #ededed;
     box-shadow: inset 0 1px 2px;
@@ -345,7 +346,7 @@ main,
     background-position: 0 0;
 }
 
-.users-navigation .search:hover::before {
+.users-navigation .search[href]:hover::before {
    background-position: 0 -25px;
 }
 
@@ -361,7 +362,7 @@ main,
     background-position: -25px 0px;
 }
 
-.users-navigation .login:hover::before {
+.users-navigation .login[href]:hover::before {
     background-position: -25px -25px;
 }
 
@@ -377,7 +378,7 @@ main,
     background-position: -50px 0;
 }
 
-.users-navigation .cart:hover::before {
+.users-navigation .cart[href]:hover::before {
     background-position: -50px -25px;
 }
 
@@ -401,7 +402,159 @@ main,
     line-height: 24px;
 }
 
+.search.active {
+	background-color: #f8f7f4;
+    color: #323232;
+}
+
+.search.active::before {
+	background-position: 0 -25px;
+}
+
+.login.active {
+	background-color: #f8f7f4;
+    color: #323232;
+}
+
+.login.active::before {
+	background-position: -25px -25px;
+}
+
+
 /*СТИЛИ ОСНОВНОГО РАЗДЕЛА*/
+
+/*промо блок*/
+
+.promo-slider {
+	height: 490px;
+}
+
+
+.promo-slider input {
+	position: absolute;
+	width: 0;
+	height: 0;
+	clip: rect(0, 0, 0, 0);
+}
+
+.promo-slider label {
+	position: relative;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+}
+
+.promo-slider label::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+
+	width: 17px;
+	height: 17px;
+	border: 2px solid white;
+	border-radius: 50%;
+}
+
+.promo-slider input:checked+label::before {
+	background-color: white;
+}
+
+/*Стили для js*/
+
+.promo-slider-btns {
+	position: absolute;
+	top: 563px;
+}
+
+.js-ok .promo-item {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: 0;
+	box-sizing: border-box;
+	margin-left: -522px;
+	width: 1045px;
+	height: 881px;
+	padding-top: 83px;
+	background-image: url("img/light1.png");
+	text-align: center;
+}
+
+.js-ok .promo-item p {
+	position: absolute;
+	margin: 0;
+	margin-left: -350px;
+	top: 394px;
+	left: 50%;
+	
+	width: 700px;
+	text-align: center;
+	font-size: 60px;
+	line-height: 60px;
+	color: white;
+}
+
+.js-ok .promo-item img {
+	width: 647px;
+	height: 584px;
+}
+
+.js-ok .promo-item .btn {
+	margin-top: 27px;
+	padding: 10px 40px;
+	border-radius: 32px;
+	font-size: 32px;
+	line-height: 44px;
+	
+}
+
+/*Стили, если не сработал js*/
+
+.not-js .promo-item {
+	display: inline-block;
+	min-height: 440px;
+	width: 348px;
+	float: left;
+	margin-right: 20px;
+	padding: 10px;
+	border-radius: 10px;
+	
+	text-align: center;
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 28px;
+	
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.not-js .promo-item img {
+	width: 100%;
+	height: auto;
+}
+
+.not-js .promo-item p {
+	margin: 0;
+	margin-top: 10px;
+	word-break: break-all;
+}
+
+.not-js .promo-item:nth-of-type(3n) {
+	margin-right: 0;
+}
+
+
+
+.not-js .promo-item a {
+	margin-top: 10px;
+}
+
+
+
+
 
 /*блок с баннерами*/
 
@@ -419,7 +572,7 @@ main,
 
 .banner-item {
     position: relative;
-    max-width: 520px;
+    max-width: 517px;
     min-height: 129px;
     padding-top: 20px;
     padding-left: 20px;
@@ -434,13 +587,15 @@ main,
     color: white;
     background-color: #880022;
     background-image: url("img/raspberries.jpg"); /*взять полный фон*/
-    margin-right: 25px;
+	background-position: center;
+    margin-right: 23px;
 }
 
 .banners .right-column {
     color: white;
     background-color: #401b07;
     background-image: url("img/chocolate.jpg"); /*взять полный фон*/
+	background-position: center;
 }
 
 .banner-item h3 {
@@ -640,6 +795,7 @@ main,
     display: block;
     width: 560px;
     height: 220px;
+	margin-bottom: 40px;
     border-radius: 15px;
     color: #323232;
 }
@@ -648,9 +804,9 @@ main,
     padding: 23px 20px;
     margin-right: 26px;
     background-color: white;
-    background-image: url("img/new-in-blog.jpg"); /*добавить полноразмерный фон*/
+    background-image: url("img/new-in-blog.jpg");
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: 10% 40%;
 }
 
 .new-in-blog h2 {
@@ -728,31 +884,263 @@ main,
 
 .contacts {
     clear: both;
+	overflow: hidden;
+	margin-left: -26px;
+	margin-right: -27px;
+	min-height: 430px;
+	
+	background-image:
+		url("img/mark.png"),
+		url("img/map.jpg");
+	background-position: 265px 140px, center center;
+	background-repeat: no-repeat;
 }
 
 
+.contacts-column {
+	float: right;
+	box-sizing: border-box;
+	min-height: 305px;
+	width: 300px;
+	padding: 30px 25px;
+	margin-top: 60px;
+	margin-right: 27px;
+	border-radius: 15px;
+	color: 323232;
+	
+	background-color: #fdfefe;
+	
+}
+
+.contacts-column p {
+	margin: 0;
+	margin-bottom: 23px;
+}
+
+.contacts-column b {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+}
+
+/*СТИЛИ ВНУТРЕННИХ СТРАНИЦ*/
+
+/*поиск*/
+
+.inner-page .search-area {
+	min-height: 250px;
+}
+
+.inner-page .search-area form {
+	display: block;
+	padding: 20px 15px;
+	margin-left: 100px;
+	margin-right: 100px;
+	border-radius: 10px;
+	
+	background-color: #f8f7f4;
+}
+
+.inner-page .search-area input[type="text"] {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 15px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	color: #999999
+}
+
+/*Вход в личный кабинет*/
+.login-area {
+	min-height: 250px;
+}
+
+.login-area form {
+	display: block;
+	width: 240px;
+	padding: 20px;
+	margin: 0 auto;
+	border-radius: 10px;
+	
+	background-color: #f8f7f4;
+}
+
+.login-area form p {
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.login-area form input:not([type="submit"]) {
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 15px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	color: #999999
+}
+
+.login-area .btn {
+	float: left;
+}
+
+.login-area .btn+p {
+	float: right;
+	margin-bottom: 0;
+}
+
+.login-area .btn+p a {
+	
+	color: #323232;
+	font-size: 13px;
+	line-height: 24px;
+}
+
+.login-area .btn+p a:hover {
+	color: #e84d37;
+}
+
+/*Форма обратной связи*/
+
+.feedback {
+	display: block;
+	box-sizing: border-box;
+	width: 477px;
+	padding: 20px;
+	margin: 0 auto;
+	border-radius: 10px;
+	
+	background-color: #f8f7f4;
+}
+
+.feedback>p {
+	margin: 0;
+	font-size: 24px;
+	line-height: 28px;
+	color: #323232;
+	font-weight: bold;
+}
+
+.feedback input[type="text"],
+.feedback textarea {
+	box-sizing: border-box;
+	width: 265px;
+	padding: 10px 15px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+	color: #999999
+}
+
+.feedback textarea {
+	width: 100%;
+	max-width: 100%;
+}
+
+.feedback .btn {
+	float: right;
+}
+
+/*стили подвала*/
+
+.page-footer {
+	padding-top: 40px;
+	padding-bottom: 25px;
+}
 
 
+.page-footer p {
+	margin: 0;
+}
 
+.page-footer .footer-socials {
+	vertical-align: middle;
+	float: left;
+	margin-right: 205px;
+}
 
+.footer-socials a {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-right: 10px;
+	border: 3px solid rgba(253, 254, 254, 0.5);
+	border-radius: 50%;
+	background-image: url("img/socials.png");
+	background-repeat: no-repeat;
+	opacity: 0.8;
+}
 
+.social-twitter {
+	background-position: 0 0;
+}
 
+.social-instagram {
+	background-position: -49px 0;
+}
 
+.social-facebook {
+	background-position: -98px 0;
+}
 
+.social-vkontakte {
+	background-position: -147px 0;
+}
 
+.footer-socials a:hover {
+	opacity: 1;
+}
 
+.footer-socials a:active {
+	box-shadow: inset 0 2px 1px #888888;
+}
 
+.footer-links {
+	vertical-align: middle;
+	float: left;
+}
 
+.lefn-column,
+.right-column {
+	display: inline-block;
+	
+	margin-right: 8px;
+}
 
+.footer-links a {
+	position: relative;
+	display: block;
+	padding-left: 22px;
+	font-size: 13px;
+	color: white;
+}
 
+.footer-links a:hover {
+	text-shadow: 1px 0;
+}
 
+.footer-links a:hover::before {
+	content: "";
+	position: absolute;
+	
+	top: 3px;
+	left: 0;
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: url("img/heart.png") no-repeat;
+}
 
+.copyright {
+	float: right;
+	color: white;
+}
 
+.copyright a {
+	color: white;
+}
 
-
-
-
-
+.copyright a:hover {
+	color: #ffbc9e
+}
 
 
 

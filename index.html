@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header class="page-header clearfix">
+   <div class="common-bg">
+    <header class="page-header clearfix">
        <nav>
           <a><img class="logo" src="img/Logo.png" alt="Gllacy Shop" width="154" height="64"></a>
           <ul class="main-navigation">
@@ -25,8 +26,8 @@
                <li><a href="#">О Компании</a></li>
            </ul>
            <ul class="users-navigation">
-               <li><a class="search" href="#"><span class="visually-hidden">Поиск</span></a></li>
-               <li><a class="login" href="#">Вход</a></li>
+               <li><a class="search" href="search.html"><span class="visually-hidden">Поиск</span></a></li>
+               <li><a class="login" href="login.html">Вход</a></li>
                <li><a class="cart" href="#">Пусто</a></li>
            </ul>
        </nav>
@@ -35,24 +36,29 @@
            С 10 до 20, ежедневно<br>
            <b>8 812 450-25-25</b>
        </p>
+       
    </header>
     
    <main>
       <h1 class="visually-hidden">Магазин Gllacy</h1>
-      <section class="promo">
-          <h2 class="visually-hidden">Промо акции</h2>
-          <div class="promo-item">
-              <img src="" alt="Крем-брюле и пломбир с малиновым джемом">
-              <p><strong>Крем-брюле и пломбир с малиновым джемом</strong><a href="#">Давайте оба!</a></p>
-          </div>
-          <div class="promo-item">
-              <img src="" alt="Шоколадный пломбир и лимонный сорбет">
-              <p><strong>Шоколадный пломбир и лимонный сорбет</strong><a href="#">Давайте оба!</a></p>
-          </div>
-          <div class="promo-item">
-              <img src="" alt="Пломбир с помадкой и клубничный щербет">
-              <p><strong>Пломбир с помадкой и клубничный щербет</strong><a href="#">Давайте оба!</a></p>
-          </div>
+      <section class="promo-slider not-js clearfix">
+		  <h2 class="visually-hidden">Промо акции</h2>
+		  <div class="promo-item cream1">
+			  <img src="img/cream1.png" alt="Крем-брюле и пломбир с малиновым джемом">
+			  <p><strong>Крем-брюле и пломбир с малиновым джемом</strong><br><a href="#" class="btn">Давайте оба!</a></p>
+		  </div>
+
+
+		  
+		  <div class="promo-item cream2">
+			  <img src="img/cream2.png" alt="Шоколадный пломбир и лимонный сорбет">
+			  <p><strong>Шоколадный пломбир и лимонный сорбет</strong><br><a href="#" class="btn">Давайте оба!</a></p>
+		  </div>
+		  <div class="promo-item cream3">
+			  <img src="img/cream3.png" alt="Пломбир с помадкой и клубничный щербет">
+			  <p><strong>Пломбир с помадкой и клубничный щербет</strong><br><a href="#" class="btn">Давайте оба!</a></p>
+		  </div>
+		  <!--promo-slider-btns from js-->
       </section>
       
       <section class="banners clearfix">
@@ -124,34 +130,40 @@
              <input class="btn" type="submit" id="subscribe-btn" name="subscribe-btn" value="Отправить">
           </form>
       </section>
-      <section class="contacts">
+      <section class="contacts clearfix">
           <h2 class="visually-hidden">Контактная информация</h2>
-          <p>
-              Адрес главного офиса<br>
-              и офлайн магазина:<br>
-              <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-          </p>
-          <p>
-              Для заказов по телефону:<br>
-              <b>8 812 450-25-25</b><br>
-              (с 10 до 20 ежедневно)
-          </p>
-          <a href="#">Форма обратной связи</a>
+          <div class="contacts-column">
+			  <p>
+				  Адрес главного офиса<br>
+				  и офлайн магазина:<br>
+				  <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
+			  </p>
+			  <p>
+				  Для заказов по телефону:<br>
+				  <b>8 812 450-25-25</b><br>
+				  (с 10 до 20 ежедневно)
+			  </p>
+			  <a href="feedback.html" class="btn">Форма обратной связи</a>
+          </div>
       </section>
-   </main>
-   <footer class="page-footer">
+   </main> 
+   <footer class="page-footer clearfix">
       <p class="footer-socials">
          <span class="visually-hidden">Подписывайтесь на нас в соцсетях!</span>
-         <a href="#">Твиттер</a><span class="visually-hidden">,</span>
-         <a href="#">Инстаграм</a><span class="visually-hidden">,</span>
-         <a href="#">Фейсбук</a><span class="visually-hidden">,</span>
-         <a href="#">Вконтакте</a>
+         <a href="#" class="social-twitter"><span class="visually-hidden">Твиттер</span></a><span class="visually-hidden">,</span>
+         <a href="#" class="social-instagram"><span class="visually-hidden">Инстаграм</span></a><span class="visually-hidden">,</span>
+         <a href="#" class="social-facebook"><span class="visually-hidden">Фейсбук</span></a><span class="visually-hidden">,</span>
+         <a href="#" class="social-vkontakte"><span class="visually-hidden">Вконтакте</span></a>
       </p>
       <p class="footer-links">
-         <a href="#">Для поставщиков</a>
-         <a href="#">Наши документы</a>
-         <a href="#">О производстве</a>
-         <a href="#">Экологические стандарты</a>
+         <span class="lefn-column">
+			 <a href="#">Для поставщиков</a>
+			 <a href="#">О производстве</a>
+         </span>
+         <span class="right-column">
+			 <a href="#">Наши документы</a>
+			 <a href="#">Экологические стандарты</a>
+         </span>
       </p>
       <p class="copyright">
          <img src="img/logo_academy.png" alt="html academy" width="108" height="38"><br>
@@ -206,6 +218,7 @@
             <button type="button" title="">Закрыть</button>
         </form>
     </section>
-<script src="1script.js"></script>
+   </div>
+<script src="script.js"></script>
 </body>
 </html>

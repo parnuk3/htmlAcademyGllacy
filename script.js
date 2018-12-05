@@ -1,45 +1,66 @@
-var bg = document.querySelector(".page-background");
+//слайдер
+
+var slider = document.querySelector(".promo-slider");
+var sliderItem = document.querySelectorAll(".promo-item");
+var bg = document.querySelector(".common-bg");
 var backgrounds = ["cream1-bg", "cream2-bg", "cream3-bg"];
+var promoSliderBtns = document.createElement("div");
 
 
-var slider = function () {
+
+var sliderChange = function () {
     
-    var slide = document.querySelector(".slider-btn:checked").dataset.bgs;
-    for (var i = 0; i < backgrounds.length; i++) {
-        bg.classList.remove(backgrounds[i]);
-    }
-    bg.classList.add(slide);
 }
 
-var dataCard = [
-	{
-		price: '310₽',
-    	description: 'Сливочное с апельсиновым джемом и цитрусовой стружкой',
-    	imgUrl: 'img/card1.jpg',
-		isHit: true
-	},
-	{
-		price: '380₽',
-    	description: 'Сливочно-кофейное с кусочками шоколада',
-    	imgUrl: 'img/card2.jpg',
-		isHit: true
-	},
-	{
-		price: '355₽',
-    	description: 'Сливочно-клубничное с присыпкой из белого шоколада',
-    	imgUrl: 'img/card3.jpg',
-		isHit: true
-	},
-	{
-		price: '415₽',
-    	description: 'Сливочное крем-брюле с карамельной подливкой',
-    	imgUrl: 'img/card4.jpg',
-		isHit: true
+promoSliderBtns.classList.add("promo-slider-btns"); //создание контейнера для кнопок слайдера
+
+slider.classList.remove("not-js"); //включение стилей js
+slider.classList.add("js-ok");
+for (var i = 1; i < sliderItem.length; i++) {
+	sliderItem[i].classList.add("visually-hidden")
+}
+
+var makeRadioButton = function (name, id, isChecked) {
+	var button = document.createElement('input');
+	button.setAttribute('type', 'radio');
+	button.setAttribute('name', name);
+	button.setAttribute('id', id);
+	if (isChecked) {
+		button.checked = true;
 	}
-    
-];
+	return button;
+};
+
+var makeRadioLabel = function (forId, text) {
+	var label = document.createElement('label');
+	var span = document.createElement('span')
+	label.setAttribute('for', forId);
+	
+	span.textContent = text;
+	span.classList.add('visually-hidden');
+	label.appendChild(span);
+	
+	return label;
+}
+
+var sliderButton1 = makeRadioButton("sliderButton", "sliderButton1", true);
+var sliderButtonLabel1 = makeRadioLabel("sliderButton1", "1");
+var sliderButton2 = makeRadioButton("sliderButton", "sliderButton2", false);
+var sliderButtonLabel2 = makeRadioLabel("sliderButton2", "2");
+var sliderButton3 = makeRadioButton("sliderButton", "sliderButton3", false);
+var sliderButtonLabel3 = makeRadioLabel("sliderButton3", "3");
+
+slider.appendChild(promoSliderBtns);
+
+promoSliderBtns.appendChild(sliderButton1);
+promoSliderBtns.appendChild(sliderButtonLabel1);
+promoSliderBtns.appendChild(sliderButton2);
+promoSliderBtns.appendChild(sliderButtonLabel2);
+promoSliderBtns.appendChild(sliderButton3);
+promoSliderBtns.appendChild(sliderButtonLabel3);
 
 
+/*
 
 var makeElement = function (tagName, className, textContent) {
     var element = document.createElement(tagName);
@@ -49,6 +70,9 @@ var makeElement = function (tagName, className, textContent) {
     }
     return element;
 }
+
+var dataCard = [
+];
 
 var createCard = function (product, isHit) {
     var listItem = makeElement ('li', 'product-item');
@@ -95,9 +119,9 @@ var productList = document.querySelector('.catalog-products');
 if (productList) {
 	renderProducts(dataCard, '.catalog-products');
 }
-
+*/
 /*модальное окно поиска*/
-
+/*
 var search = document.querySelector(".main-search");
 var searchPopup = document.querySelector(".modal-search");
 var searchField = searchPopup.querySelector("input");
@@ -161,3 +185,4 @@ window.addEventListener("keydown", function(event){
 		}
 	}
 });
+*/
